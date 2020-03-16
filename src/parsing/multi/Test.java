@@ -13,5 +13,11 @@ public class Test {
         LookaheadLexer lexer = new LookaheadLexer(args[0]); // parse arg
         LookaheadParser parser = new LookaheadParser(lexer, 2);
         parser.list(); // begin parsing at rule list
+//        Token t = lexer.nextToken();
+//        while ( t.type != Lexer.EOF_TYPE ) {
+//            System.out.println(t);
+//            t = lexer.nextToken();
+//        }
+//        System.out.println(t); // EOF
     }
 }
