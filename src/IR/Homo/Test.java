@@ -13,9 +13,16 @@ public class Test {
         Token plus = new Token(Token.PLUS,"+");
         Token one = new Token(Token.INT,"1");
         Token two = new Token(Token.INT,"2");
+        Token three = new Token(Token.INT,"3");
+        Token four = new Token(Token.INT,"4");
+
         AST root = new AST(plus);
         root.addChild(new AST(one));
         root.addChild(new AST(two));
+        AST mid = new AST(plus);
+        root.addChild(mid);
+        mid.addChild(new AST(three));
+        mid.addChild(new AST(four));
         System.out.println("1+2 tree: "+root.toStringTree());
 
         AST list = new AST(); // make nil node as root for a list
